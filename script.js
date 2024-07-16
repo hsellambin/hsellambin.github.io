@@ -3,7 +3,7 @@ function checkPassword() {
     const message = document.getElementById('message');
     if (password === 'disney') {
         message.style.color = '#00ff00';
-        message.innerText = 'Félicitations !';
+        message.innerText = 'Félicitations ! Tu gagnes 2 places pour DisneyLand Paris !';
         showConfetti();
     } else {
         message.style.color = 'red';
