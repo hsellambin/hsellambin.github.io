@@ -39,3 +39,9 @@ function showConfetti() {
     };
     document.head.appendChild(script);
 })();
+
+// Ajouter un événement pour effacer le message lors de la saisie
+document.getElementById('password').addEventListener('input', function() {
+    const message = document.getElementById('message');
+    message.innerText = '';
+});
