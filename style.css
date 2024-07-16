@@ -7,6 +7,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #0d0d0d;
     color: #00ff00;
+    padding: 20px;
 }
 
 .container {
@@ -15,6 +16,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px #00ff00;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
 }
 
 h1 {
@@ -29,13 +33,14 @@ p {
 
 input[type="password"] {
     padding: 10px;
-    width: 200px;
+    width: calc(100% - 22px);
     margin: 10px 0;
     border: 1px solid #00ff00;
     border-radius: 5px;
     background-color: #0d0d0d;
     color: #00ff00;
     text-shadow: 0 0 5px #00ff00;
+    box-sizing: border-box;
 }
 
 input[type="password"]::placeholder {
@@ -51,6 +56,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     text-shadow: 0 0 5px #00ff00;
+    box-sizing: border-box;
+    width: calc(100% - 22px);
 }
 
 button:hover {
@@ -72,4 +79,24 @@ button:hover {
     pointer-events: none;
     z-index: 9999;
     display: none;
+}
+
+/* Styles pour les écrans plus petits */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    input[type="password"], button {
+        width: 100%;
+        padding: 12px;
+    }
 }
